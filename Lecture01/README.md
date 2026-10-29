@@ -1,128 +1,141 @@
-# Lecture 01: Signal Visualization in MATLAB
+# Lecture 01: Signal Visualization Using MATLAB
 
-**Student:** Leslie  
-**Course:** Digital Signal Processing  
-**Institution:** Savonia University of Applied Sciences
 
 ## 1. Introduction
 
-The purpose of this assignment is to learn how to generate, visualize, and interpret simple signals using MATLAB. The assignment explores sine waves, frequency, amplitude, and random noise.
+The objective of this assignment is to generate, visualize, and interpret simple signals using MATLAB. The tasks explore sine waves, frequency, amplitude, and the effect of random noise on signals.
 
 ## 2. Task 1: Create a Sine Wave
 
-A sine wave was generated with the following parameters:
-
-- Amplitude: 1
-- Frequency: 5 Hz
-- Duration: 1 second
-- Sampling frequency: 1000 Hz
-
-The signal was plotted against time with a title, labelled axes, and a grid.
+A sine wave was generated using an amplitude of 1, a frequency of 5 Hz, and a duration of 1 second. The signal was plotted against time with a title, labelled axes, and a grid.
 
 The mathematical equation is:
 
-x(t) = A sin(2πft)
+\[
+x(t)=A\sin(2\pi ft)
+\]
 
-where A is the amplitude and f is the frequency.
+Where:
+- \(A\) is the amplitude.
+- \(f\) is the frequency in hertz.
+- \(t\) is time in seconds.
 
-## 3. Task 2: Compare Different Frequencies
+**Observation:** The waveform oscillates smoothly between -1 and +1 and completes five cycles in one second.
 
-Three sine waves were generated at 2 Hz, 5 Hz, and 10 Hz and displayed using subplots.
+## 3. Task 2: Comparison of Different Frequencies
+
+Three sine waves were generated using frequencies of 2 Hz, 5 Hz, and 10 Hz.
+
+### Frequency Comparison Graph
+
+![Frequency Comparison](frequency_comparison.png)
+
+**Questions and Answers**
 
 **1. Which signal changes fastest?**
 
-The 10 Hz signal changes fastest because it completes the greatest number of cycles per second.
+The 10 Hz signal changes fastest because it completes ten cycles per second.
 
 **2. Which signal has the lowest frequency?**
 
-The 2 Hz signal has the lowest frequency. It completes two cycles per second.
+The 2 Hz signal has the lowest frequency and completes two cycles per second.
 
 **3. How can you see the difference in the plots?**
 
-The higher-frequency signal has more cycles within the same time interval. The 10 Hz signal has more oscillations than the 5 Hz and 2 Hz signals.
+The difference is visible in the number of oscillations. The 10 Hz signal has the most cycles, while the 2 Hz signal has the fewest cycles over the same time interval.
 
-Figure: `frequency_comparison.png`
+## 4. Task 3: Comparison of Different Amplitudes
 
-## 4. Task 3: Compare Different Amplitudes
+Three sine waves were generated with amplitudes of 0.5, 1, and 2. All signals have the same frequency of 5 Hz.
 
-Three sine waves were generated with amplitudes of 0.5, 1, and 2. All signals use the same frequency of 5 Hz.
+### Amplitude Comparison Graph
+
+![Amplitude Comparison](amplitude_comparison.png)
+
+**Questions and Answers**
 
 **1. Which signal has the largest amplitude?**
 
-The signal with amplitude 2 has the largest amplitude.
+The signal with an amplitude of 2 has the largest amplitude.
 
 **2. Does changing amplitude change frequency?**
 
-No. Changing amplitude changes the height of the waveform but does not change its frequency.
+No. Changing amplitude changes the height of the waveform but does not change its frequency. All three signals complete five cycles per second.
 
 **3. Give one real-world example where amplitude is important.**
 
-In sound engineering, amplitude is related to sound pressure and perceived loudness. A larger sound amplitude generally corresponds to a louder sound under comparable conditions.
+In audio systems, amplitude is related to sound pressure and perceived loudness. Greater amplitude generally corresponds to louder sound under comparable conditions.
 
-Figure: `amplitude_comparison.png`
+## 5. Task 4: Adding Noise to a Signal
 
-## 5. Task 4: Add Noise
+Random Gaussian noise was added to a clean 5 Hz sine wave to create a noisy signal.
 
-Random Gaussian noise was added to a clean sine wave to create a noisy signal.
+### Clean Signal vs. Noisy Signal
+
+![Clean vs Noisy Signal](clean_vs_noisy_signal.png)
+
+**Questions and Answers**
 
 **1. What changed after adding noise?**
 
-The waveform became irregular because random variations were added to the original signal.
+The waveform became irregular because random variations were added to the clean signal.
 
 **2. Can you still recognize the original signal?**
 
-Yes. The repeating sine-wave pattern is still recognizable, although the noise makes the waveform less smooth.
+Yes. The repeating sine-wave pattern remains recognizable, although the added noise makes the waveform less smooth.
 
 **3. Give one real-world source of signal noise.**
 
-Electrical interference from nearby electronic devices can introduce unwanted noise into sensor measurements.
+Electromagnetic interference from nearby electronic devices can introduce unwanted noise into sensor measurements.
 
-Figure: `clean_vs_noisy_signal.png`
+## 6. Task 5: Saving Figures
 
-## 6. Task 5: Save Figures
-
-The MATLAB script saves the following figures as PNG files:
+The MATLAB script saves three figures in PNG format:
 
 - `frequency_comparison.png`
 - `amplitude_comparison.png`
 - `clean_vs_noisy_signal.png`
 
-These figures make it easier to compare and interpret the signals.
+These images are included in this README to make the results easy to view and compare on GitHub.
 
-## 7. Task 6: Use AI Responsibly
+## 7. Task 6: Responsible Use of AI
 
 **AI Tool Used:** ChatGPT
 
 **Prompt:**
 
-"Help me write a MATLAB script to generate sine waves with different frequencies and amplitudes, add random noise, plot the signals using subplots, and save the figures as PNG files."
+"Help me create a MATLAB script to generate sine waves with different frequencies and amplitudes, add random noise, display the results using subplots, and save the graphs as PNG images."
 
 **What AI Suggested:**
 
-ChatGPT suggested using MATLAB functions such as `sin`, `plot`, `subplot`, `grid on`, and `saveas`. It also explained how to generate random noise and compare clean and noisy signals.
+ChatGPT suggested using MATLAB functions such as `sin()`, `plot()`, `subplot()`, `grid on`, `randn()`, and `saveas()` to generate, display, and save the signals.
 
 **Did the code work immediately?**
 
-To be completed after running the code in MATLAB. Record whether it worked immediately or whether errors occurred.
+Complete this answer after running and testing the script in MATLAB. State whether it worked immediately or required troubleshooting.
 
 **What did you modify?**
 
-To be completed after testing. Describe any changes you made to the code, parameters, plot labels, or file paths.
+Describe the actual changes you made after testing, such as adjusting plot labels, figure layout, or file paths. If no changes were necessary, state that honestly.
 
 **How did you verify the result?**
 
-To be completed after testing. Check that all plots display correctly, the frequency and amplitude differences are visible, the noisy signal contains random variations, and all three PNG files are saved successfully.
+Explain how you ran the script, inspected the plots, checked the expected frequencies and amplitudes, confirmed that noise was added, and verified that the three PNG files were saved.
 
 AI was used as a learning aid. The code and results must be tested and understood before submission.
 
 ## 8. Conclusion
 
-This assignment demonstrates how MATLAB can be used to generate and visualize basic signals. Frequency determines how quickly a signal oscillates, amplitude determines its magnitude, and noise introduces unwanted variations. Plotting signals helps engineers understand and analyze signal behaviour.
+This assignment demonstrated how MATLAB can generate and visualize basic signals. Frequency determines the number of oscillations per second, amplitude determines the magnitude of a sine wave, and noise introduces unwanted variations. These concepts are fundamental to digital signal processing and the analysis of real-world sensor signals.
 
-## 9. Repository Contents
+## 9. Project Files
 
-- `Lecture01_signal_visualization.m`
-- `README.md`
-- `frequency_comparison.png`
-- `amplitude_comparison.png`
-- `clean_vs_noisy_signal.png`
+- `Lecture01_signal_visualization.m` — MATLAB source code.
+- `README.md` — Assignment explanation, observations, and answers.
+- `frequency_comparison.png` — Comparison of 2 Hz, 5 Hz, and 10 Hz signals.
+- `amplitude_comparison.png` — Comparison of amplitudes 0.5, 1, and 2.
+- `clean_vs_noisy_signal.png` — Comparison of clean and noisy signals.
+
+---
+
+*All graphs are generated using the MATLAB script included in this repository.*
